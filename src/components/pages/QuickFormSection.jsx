@@ -43,28 +43,28 @@ export default function QuickFormSection() {
   const handleWhatsApp = () => {
     if (!validateForm()) return;
 
-    const message = `नमस्कार,\n\nनाव: ${name}\nमोबाईल: ${mobile}\n\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
+    const message = `नमस्कार,\n\nनाव: ${name}\nमोबाईल: ${mobile}\n\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
 
     const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
   // Call Handler
-  const handleCall = () => {
-    if (!validateForm()) return;
+//   const handleCall = () => {
+//     if (!validateForm()) return;
 
-    // window.location.href = "tel:7387484615";
-    const message = `नमस्कार,
-    नाव: ${name}
-    मोबाईल: ${mobile}
+//     // window.location.href = "tel:7387484615";
+//     const message = `नमस्कार,
+//     नाव: ${name}
+//     मोबाईल: ${mobile}
 
-    मला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
+//     मला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
 
-    // Works on Android & iOS
-    const smsUrl = `sms:7387484615?body=${encodeURIComponent(message)}`;
-    window.location.href = smsUrl;
+//     // Works on Android & iOS
+//     const smsUrl = `sms:7387484615?body=${encodeURIComponent(message)}`;
+//     window.location.href = smsUrl;
 
-  };
+//   };
 
 
 
@@ -147,10 +147,11 @@ export default function QuickFormSection() {
                                     <i className="fab fa-whatsapp fs-4 me-2"></i>
                                     WhatsApp वर अर्ज पाठवा
                                 </button>
-                                <button type="button"
-                                        className="btn call-btn w-100 mt-2 fs-5"
-                                        onClick={handleCall}>
-                                    <i className="fa-solid fa-phone me-1 fs-5 HmIconSize"></i> कॉल करा</button>
+                                <a href="tel:7387484615"
+                                        className="btn call-btn w-100 mt-2 fs-5 text-decoration-none"
+                                       >
+                                    <i className="fa-solid fa-phone me-1 fs-5 HmIconSize"></i> कॉल करा</a>
+                                    {/*  onClick={handleCall} */}
                             </form>
 
                         </div>

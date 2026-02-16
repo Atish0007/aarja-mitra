@@ -195,7 +195,7 @@
   position: relative;
   border: none;
   border-radius: 20px;
-  background: linear-gradient(135deg, #e6fff3, #ffffff);
+  /* background: linear-gradient(135deg, #e6fff3, #ffffff); */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

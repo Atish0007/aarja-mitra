@@ -5,7 +5,7 @@ export default function CallBannerSection() {
 
 const handleWhatsApp = () => {
 
-    const message = `नमस्कार,\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
+    const message = `नमस्कार,\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
     //const message = `नमस्कार,\n\nनाव: ${//name}\nमोबाईल: ${//mobile}\n\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
 
     const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;

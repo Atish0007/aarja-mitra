@@ -3,12 +3,16 @@ import "../assets/css/footer.css";
 function Footer() {
 
 const handleFooterGatNoBtn=()=>{
-     const msg = "नमस्कार, मला माझा गट नंबर संदर्भात माहिती हवी आहे.";
+     const msg = "नमस्कार,\n\nमला माझा गट नंबरचा मोजणी अर्ज भरायचा आहे.";
         window.open(
             `https://wa.me/917387484615?text=${encodeURIComponent(msg)}`,
             "_blank"
         );
 }
+
+  const handleApplyBtn = () => {
+    alert("अर्ज करा button clicked"); // इथे form / page redirect दे
+  };
 
     const data = [
         {title:"कॉल करा",subtitle:"7387484615",icon:"fas fa-phone strip-icon ftrPhone"},
@@ -39,10 +43,20 @@ const handleFooterGatNoBtn=()=>{
                 ))}
 
 
-                    <button className="fixed-gat-btn" onClick={handleFooterGatNoBtn}>
-                        <i className="fa-solid fa-location-dot me-2"></i>
-                        फक्त गट नंबर सांगा
-                    </button>
+                    {/* FIXED BUTTONS */}
+                   <div className="fixed-btn-wrapper">
+                        <a href="tel:7387484615" className="fixed-btn fixed-apply fs-6 text-decoration-none callFixedBtn">
+                            <i className="fa-solid fa-phone me-2 fs-6"></i>
+                            कॉल करा
+                        </a>
+                        {/*  onClick={handleApplyBtn} */}
+                        <button className="fixed-btn fixed-whatsapp fs-6 whatsappFixedBtn" onClick={handleFooterGatNoBtn}>
+                            <i className="fab fa-whatsapp me-2 fs-6"></i>
+                            WhatsApp करा
+                        </button>
+                    </div>
+
+
 
                 </div>
             </div>

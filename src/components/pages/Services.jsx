@@ -46,7 +46,7 @@ function Services(){
                                             <i className="fa-solid fa-clock text-success me-1"></i> एका दिवसामध्ये अर्ज भरा
                                             </h5>
                                             <p className="promo-price mb-0">
-                                            फक्त <span>500</span> रुपये मध्ये
+                                            फक्त &nbsp; <span>500</span> &nbsp; रुपये मध्ये
                                             </p>
                                         </div>
                                         </div>

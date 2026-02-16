@@ -57,6 +57,13 @@
   opacity: 0.85;
 }
 
+@media (max-width: 992px){
+  .footer-strip{
+    padding-bottom: 70px; 
+  }
+}
+
+
 /* Mobile improvements */
 @media (max-width: 767px) {
   .strip-item {
@@ -64,6 +71,7 @@
     text-align: center;
     flex-direction: column;
   }
+  
 }
 
 
@@ -78,6 +86,9 @@
   }
   .strip-icon {
     font-size: 25px;
+  }
+  .footer-strip{
+    padding-bottom: 70px; 
   }
 }
 
@@ -121,7 +132,7 @@
 
 
 /*Fixed button footer */
-.fixed-gat-btn {
+/* .fixed-gat-btn {
   position: fixed;
   bottom: 5px;
   right: 15px;
@@ -140,14 +151,12 @@
   animation: softPulse 2s infinite;
 }
 
-/* 🔴 DESKTOP & LARGE SCREENS → HIDE BUTTON */
 @media (min-width: 992px) {
   .fixed-gat-btn {
     display: none;
   }
 }
 
-/* Animation */
 @keyframes softPulse {
   0% {
     box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.6);
@@ -158,4 +167,84 @@
   100% {
     box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
   }
+} */
+
+
+/* FOOTER STRIP */
+
+/* FIXED BUTTONS */
+
+/* FIXED BUTTON WRAPPER */
+/* WRAPPER */
+.fixed-btn-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  z-index: 9999;
 }
+
+/* COMMON BUTTON */
+.fixed-btn {
+  width: 50%;
+  border: none;
+  padding: 14px 10px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* LEFT BUTTON */
+.fixed-whatsapp {
+  background: #25d366;
+}
+
+/* RIGHT BUTTON */
+.fixed-apply {
+  background: #fd7e14;
+}
+
+/* ICON SIZE */
+.fixed-btn i {
+  font-size: 18px;
+}
+
+/* HOVER */
+.fixed-btn:hover {
+  opacity: 0.9;
+}
+
+/* FOOTER CONTENT BUTTON OVERLAP FIX */
+.footer-strip {
+  padding-bottom: 70px; /* buttons height space */
+}
+
+.callFixedBtn{
+  border-radius: 20px 0px 0px 0px;
+}
+.whatsappFixedBtn{
+  border-radius: 0px 20px 0px 0px;
+}
+
+
+/* MOBILE TWEAK */
+
+@media (min-width: 992px) {
+  .fixed-btn-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .fixed-btn {
+    font-size: 14px;
+    padding: 13px 6px;
+  }
+}
+
+

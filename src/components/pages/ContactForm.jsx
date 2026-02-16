@@ -40,9 +40,7 @@ export default function ContactForm() {
     const handleWhatsApp = () => {
         if (!validateForm()) return;
 
-        const text = `नमस्कार,
-                        नाव: ${formData.name}
-                        मोबाईल: ${formData.mobile}`;
+        const text = `नमस्कार,\n\nनाव: ${formData.name}\nमोबाईल: ${formData.mobile}`;
 
         const url = `https://wa.me/917387484615?text=${encodeURIComponent(text)}`;
         window.open(url, "_blank");
