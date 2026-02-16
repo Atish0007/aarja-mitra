@@ -34,27 +34,25 @@ function Services(){
                                             </a>
                                     </div>
                                 ))}
-
                                 </div>
 
 
-                                 {/* <div className="row py-5 justify-content-center">
-                                    {services.map((item, i) => (
-                                        <div className="col-12 col-sm-6 col-md-3 mb-4" key={i}>
-                                            <div className="card text-center CstmShadow service-card">
-                                                <div className="card-body d-flex flex-column align-items-center">
-                                                    <img src={item.icon} className="service-icon mb-3" alt={item.title}/>
-                                                    <div className="service-title mb-2">
-                                                        {item.title}
-                                                    </div>
-                                                    <button className="btn btn-outline-primary mt-auto service-btn fw-bold">
-                                                        अधिक माहिती
-                                                    </button>
-                                                </div>
-                                            </div>
+                                {/* Promo Note */}
+                                <div className="row justify-content-center mt-4 mb-1">
+                                    <div className="col-12 col-md-10 col-lg-8">
+                                        <div className="card promo-ad-card text-center">
+                                        <div className="card-body py-4">
+                                            <h5 className="promo-title mb-2">
+                                            <i className="fa-solid fa-clock text-success me-1"></i> एका दिवसामध्ये अर्ज भरा
+                                            </h5>
+                                            <p className="promo-price mb-0">
+                                            फक्त <span>500</span> रुपये मध्ये
+                                            </p>
                                         </div>
-                                    ))}
-                                </div> */}
+                                        </div>
+                                    </div>
+                                </div>
+
 
                         </div>
                     </div>

@@ -2,6 +2,14 @@ import "../assets/css/footer.css";
 
 function Footer() {
 
+const handleFooterGatNoBtn=()=>{
+     const msg = "नमस्कार, मला माझा गट नंबर संदर्भात माहिती हवी आहे.";
+        window.open(
+            `https://wa.me/917387484615?text=${encodeURIComponent(msg)}`,
+            "_blank"
+        );
+}
+
     const data = [
         {title:"कॉल करा",subtitle:"7387484615",icon:"fas fa-phone strip-icon ftrPhone"},
         // {title:"WhatsApp",subtitle:"WhatsApp वर चॅट करा",icon:"fab fa-whatsapp strip-icon whatsapp"},
@@ -30,46 +38,11 @@ function Footer() {
                     </div>
                 ))}
 
-                    {/* Call
-                    <div className="col-12 col-md-3">
-                        <div className="strip-item">
-                            <span className="footerIcon"><i className="fas fa-phone-alt strip-icon"></i></span>
-                            <div>
-                                <h6>कॉल करा</h6>
-                                <p>800789123545</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div className="col-12 col-md-3">
-                        <div className="strip-item">
-                            <i className="fab fa-whatsapp strip-icon whatsapp"></i>
-                            <div>
-                                <h6>WhatsApp</h6>
-                                <p>WhatsApp वर चॅट करा</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-md-3">
-                        <div className="strip-item">
-                            <i className="fas fa-map-marker-alt strip-icon"></i>
-                            <div>
-                                <h6>ऑफिसचा पत्ता</h6>
-                                <p>गट क्रमांक, नेवासा, नाशिक</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-md-3">
-                        <div className="strip-item">
-                            <i className="fas fa-question-circle strip-icon"></i>
-                            <div>
-                                <h6>अर्ज फॉर्म भरायचा?</h6>
-                                <p>मदत मिळवा</p>
-                            </div>
-                        </div>
-                    </div> */}
+                    <button className="fixed-gat-btn" onClick={handleFooterGatNoBtn}>
+                        <i className="fa-solid fa-location-dot me-2"></i>
+                        फक्त गट नंबर सांगा
+                    </button>
 
                 </div>
             </div>

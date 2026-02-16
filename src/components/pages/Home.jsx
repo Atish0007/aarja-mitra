@@ -36,7 +36,7 @@ function Home(){
                         id="homeBrandCarousel"
                         className="carousel slide brandWrap animated-label" //carousel slide brandWrap animated-label
                         data-bs-ride="carousel"
-                        data-bs-interval="3000"
+                        data-bs-interval="5000"
                         >
                         <div className="carousel-inner">
 
@@ -68,26 +68,26 @@ function Home(){
                             </div> 
 
                             {/* ===== SLIDE 2 : PM Awas Yojana ===== */}
-                             <div className="carousel-item">
+                             <div className="carousel-item text-start text-sm-center">
                                     <h1 className="hmbar pt-2 pt-md-0">
                                          <img className="graminLG" src={graminLG} alt="ApliMojani" />
-                                        <span className="MainHeading cstEngFont AapliMojaniText F40 F2ndSlideMainHdng">प्रधानमंत्री आवास योजना – तुमच्या स्वतःच्या घराचे स्वप्न आता साकार
+                                        <span className="MainHeading cstEngFont AapliMojaniText F40 F2ndSlideMainHdng">प्रधानमंत्री आवास योजना –  तुमच्या स्वतःच्या घराचे स्वप्न आता साकार
                                             </span>
                                     </h1>
 
-                                    <p className="homeHeading hmbar tagline fw-bold F25 F2ndSlideSubHdng">
-                                        ग्रामीण व शहरी लाभार्थ्यांसाठी अर्ज, पात्रता तपासणी व संपूर्ण मार्गदर्शन –
-                                        <br />
+                                    <h2 className="homeHeading hmbar tagline fw-bold F25 F2ndSlideSubHdng ms-2 ms-md-0">
+                                        ग्रामीण व शहरी लाभार्थ्यांसाठी अर्ज,<br className="d-block d-md-none" /> पात्रता तपासणी व संपूर्ण मार्गदर्शन –
+                                        <br className="d-block d-md-none" />
                                         जलद आणि विश्वासार्ह सेवा
-                                    </p>
+                                    </h2>
 
-                                    <h5 className="homeHeading fw-bold F20 F2ndSlideAnudan">
+                                    <h5 className="homeHeading fw-bold F20 F2ndSlideAnudan ms-2 ms-md-0">
                                         सरकारी अनुदान ₹1.20 लाख ते ₹2.50 लाख पर्यंत
                                     </h5>
 
                                     <small className="fw-bold F15">
-                                            <span className="text-success">✔</span> ग्रामीण व शहरी दोन्ही योजना उपलब्ध |{" "}
-                                            <span className="text-success">✔</span> अर्ज भरणे + डॉक्युमेंट चेक + फॉलोअप
+                                            <span className="text-success ms-1 ms-md-0">✔</span> ग्रामीण व शहरी दोन्ही योजना उपलब्ध |{" "} <br className="d-block d-md-none" />
+                                            <span className="text-success ms-1 ms-md-0">✔</span> अर्ज भरणे + डॉक्युमेंट चेक + फॉलोअप
                                     </small>
                             </div> 
 

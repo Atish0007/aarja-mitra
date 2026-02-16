@@ -27,6 +27,7 @@
   height: 60px;
   transform: scale(2.5);
   margin-right: 35px;
+  margin-bottom: 35px;
 }
 
 .hmheadful {
@@ -211,18 +212,18 @@
       font-size: 16px !important;
   }
   .F40{
-    font-size:15px !important;
+    font-size:14px !important;
   }
   .F2ndSlideSubHdng{
     font-size: 10px !important;
   }
   .F2ndSlideAnudan{
-    font-size: 12px !important;
+    font-size: 11px !important;
     font-weight: 900 !important;
     color: #ff0061;
   }
   .graminLG {
-    height: 30px;
+    height: 40px;
     transform: scale(2);
     margin-right: 25px;
   }
@@ -239,4 +240,46 @@
     font-size:unset !important;
   } */
 
+}
+
+
+/* ===== Carousel Common Fix ===== */
+#homeBrandCarousel .carousel-item {
+  text-align: center;
+}
+
+/* 2nd slide font tuning */
+.F2ndSlideMainHdng {
+  display: inline-block;
+  max-width: 80%;
+  line-height: 1.3;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .F2ndSlideMainHdng {
+    font-size: 28px !important;
+  }
+
+  .F2ndSlideSubHdng {
+    font-size: 18px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .F2ndSlideMainHdng {
+    font-size: 15px !important;
+    font-weight: bold;
+  }
+
+  .F2ndSlideSubHdng {
+    font-size: 12px !important;
+    margin-top: 0;
+  }
+
+  .graminLG {
+    /* max-width: 70px; */
+    margin-bottom: 15px;
+  }
 }
