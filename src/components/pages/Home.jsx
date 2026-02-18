@@ -6,15 +6,41 @@ import graminLG from "../../assets/images/graminLG.png"
 
 function Home(){
 
+    // useEffect(() => {
+    //     const el = document.getElementById("homeBrandCarousel");
+    //     if (el) {
+    //         new Carousel(el, {
+    //         interval: 5000,
+    //         ride: "carousel",
+    //         });
+    //     }
+    // }, []);
+
+
     useEffect(() => {
-        const el = document.getElementById("homeBrandCarousel");
-        if (el) {
-            new Carousel(el, {
-            interval: 3000,
-            ride: "carousel",
-            });
-        }
-    }, []);
+    const el = document.getElementById("homeBrandCarousel");
+    if (!el) return;
+
+    const carousel = new Carousel(el, {
+        interval: 5000,
+        ride: "carousel",
+        pause: false, // IMPORTANT: disable default hover pause
+    });
+
+    /* ===== DESKTOP EVENTS ===== */
+    el.addEventListener("mouseenter", () => carousel.pause());
+    el.addEventListener("mouseleave", () => carousel.cycle());
+
+    /* ===== MOBILE EVENTS ===== */
+    el.addEventListener("touchstart", () => carousel.pause(), { passive: true });
+    el.addEventListener("touchend", () => carousel.cycle());
+    el.addEventListener("touchcancel", () => carousel.cycle());
+
+    return () => {
+        carousel.dispose();
+    };
+}, []);
+
 
     const handleWhatsApp = () => {
 
@@ -35,8 +61,8 @@ function Home(){
                         <div
                         id="homeBrandCarousel"
                         className="carousel slide brandWrap animated-label" //carousel slide brandWrap animated-label
-                        data-bs-ride="carousel"
-                        data-bs-interval="5000"
+                        // data-bs-ride="carousel"
+                        // data-bs-interval="5000"
                         >
                         <div className="carousel-inner">
 
@@ -45,7 +71,7 @@ function Home(){
                                         <h1 className="homeHeading hmheadful hmbar pt-2 pt-md-0">
                                             <img className="mojaniLG" src={mojaniLG} alt="ApliMojani" />
                                             <span className="MainHeading cstEngFont AapliMojaniText F60">
-                                            Aapli Mojani
+                                            आपली मोजणी
                                             </span>
                                         </h1>
 
@@ -68,28 +94,28 @@ function Home(){
                             </div> 
 
                             {/* ===== SLIDE 2 : PM Awas Yojana ===== */}
-                             <div className="carousel-item text-start text-sm-center">
+                             {/* <div className="carousel-item text-start text-sm-center">
                                     <h1 className="hmbar pt-2 pt-md-0">
                                          <img className="graminLG" src={graminLG} alt="ApliMojani" />
                                         <span className="MainHeading cstEngFont AapliMojaniText F40 F2ndSlideMainHdng">प्रधानमंत्री आवास योजना –  तुमच्या स्वतःच्या घराचे स्वप्न आता साकार
                                             </span>
                                     </h1>
 
-                                    <h2 className="homeHeading hmbar tagline fw-bold F25 F2ndSlideSubHdng ms-2 ms-md-0">
+                                    <h2 className="homeHeading hmbar tagline fw-bold F25 F2ndSlideSubHdng ms-4 ms-md-0">
                                         ग्रामीण व शहरी लाभार्थ्यांसाठी अर्ज,<br className="d-block d-md-none" /> पात्रता तपासणी व संपूर्ण मार्गदर्शन –
                                         <br className="d-block d-md-none" />
                                         जलद आणि विश्वासार्ह सेवा
                                     </h2>
 
-                                    <h5 className="homeHeading fw-bold F20 F2ndSlideAnudan ms-2 ms-md-0">
+                                    <h5 className="homeHeading fw-bold F20 F2ndSlideAnudan ms-4 ms-md-0">
                                         सरकारी अनुदान ₹1.20 लाख ते ₹2.50 लाख पर्यंत
                                     </h5>
 
                                     <small className="fw-bold F15">
-                                            <span className="text-success ms-1 ms-md-0">✔</span> ग्रामीण व शहरी दोन्ही योजना उपलब्ध |{" "} <br className="d-block d-md-none" />
-                                            <span className="text-success ms-1 ms-md-0">✔</span> अर्ज भरणे + डॉक्युमेंट चेक + फॉलोअप
+                                            <span className="text-success ms-3 ms-md-0">✔</span> ग्रामीण व शहरी दोन्ही योजना उपलब्ध |{" "} <br className="d-block d-md-none" />
+                                            <span className="text-success ms-3 ms-md-0">✔</span> अर्ज भरणे + डॉक्युमेंट चेक + फॉलोअप
                                     </small>
-                            </div> 
+                            </div>  */}
 
                         </div>
                         </div>
