@@ -2,7 +2,7 @@ import "../../assets/css/process.css";
 import one from "../../assets/images/process/one.png"
 import two from "../../assets/images/process/two.png";
 import three from "../../assets/images/process/three.png";
-import { FaClipboardCheck, FaSmile, FaFileAlt, FaMapMarkerAlt  } from "react-icons/fa";
+import { FaClipboardCheck, FaSmile, FaFileAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 function Process() {
     const steps = [
@@ -56,7 +56,7 @@ function Process() {
                                             width={i === steps.length - 1 ? 130 : 170}
                                         />
                                         <h6 className="fs-3 fw-bold">{item.title}</h6>
-                                        <p className={steps.length - 1 ==i ? "fs-6 small text-muted m-1": "fs-6 small text-muted"}>
+                                        <p className={steps.length - 1 == i ? "fs-6 small text-muted m-1" : "fs-6 small text-muted"}>
                                             {item.subtitle}
                                         </p>
                                         <div className="circleWrapper">
@@ -68,25 +68,6 @@ function Process() {
                                 </div>
                             ))}
                         </div>
-
-                        {/* <div className="text-center mt-4">
-                                <div className="row justify-content-center g-3">
-                                    <div className="col-12 col-md-6 col-lg-3">
-                                    <button className="btn btn-success btn-lg w-100 fw-bold px-4">
-                                        <i className="fa-solid fa-file-lines me-2"></i>
-                                        अर्ज स्थिती पहा
-                                    </button>
-                                    </div>
-
-                                    <div className="col-12 col-md-6 col-lg-3">
-                                    <button className="btn btn-warning btn-lg w-100 text-white fw-bold px-4">
-                                        <i className="fa-solid fa-phone me-2"></i>
-                                        तज्ञाशी बोला
-                                    </button>
-                                    </div>
-                                </div>
-                            </div> */}
-
 
                         <div className="my-4 my-md-5">
                             <div className="stats-box position-relative">
@@ -113,7 +94,6 @@ function Process() {
                             </div>
                         </div>
 
-                        {/* <p className="text-center font-weight-bold fs-5 fst-italic text-success"> <small>⏱️ कालावधी शासकीय प्रक्रियेवर अवलंबून</small> </p> */}
                     </div>
                 </div>
             </div>

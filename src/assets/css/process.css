@@ -1,16 +1,14 @@
-.processheading{
-    color: #0891b2;
-    font-weight: 600;
+.processheading {
+  color: #0891b2;
+  font-weight: 600;
 }
 
 
 .work-card {
   background: #ffffff;
   border-radius: 10px;
-  /* border:3px solid #ffc107; */
   border: 3px solid #61cf7859;
   padding: 20px;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
   transition: all 0.3s ease;
 }
@@ -35,29 +33,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(135deg, #ffc107, #ff6f00); */
   background: linear-gradient(135deg, #07ff5f, #478b68);
   box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.4s ease;
   cursor: pointer;
   position: relative;
 }
+
 .cstmCircle:hover {
   transform: translateY(-8px) scale(1.1);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
+
 .cstmCircle::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  /* background: rgba(255, 193, 7, 0.4); */
   background: rgb(99 227 110 / 39%);
   z-index: -1;
   transition: 0.4s;
   transform: scale(0);
 }
+
 .cstmCircle:hover::before {
   transform: scale(1.3);
 }
@@ -101,7 +100,6 @@
   .stat-item {
     border-right: none;
     border-bottom: none;
-    /* border-bottom: 1px solid #e6e6e6; */
   }
 
   .stat-col:nth-child(3) .stat-item,
@@ -112,10 +110,10 @@
 
 /* Icon */
 .icon-box {
-    font-size: 25px;
-    color: #28a745;
-    flex-shrink: 0;
-    transform: scale(1.5);
+  font-size: 25px;
+  color: #28a745;
+  flex-shrink: 0;
+  transform: scale(1.5);
 }
 
 /* Number */
@@ -149,15 +147,18 @@
 
 /* Smaller curve for mobile */
 @media (max-width: 576px) {
-  .icon-box{
+  .icon-box {
     transform: unset !important;
   }
-  .stat-number{
-    font-size:20px;
+
+  .stat-number {
+    font-size: 20px;
   }
-  .stat-text{
+
+  .stat-text {
     font-size: 10px;
   }
+
   .green-curve {
     width: 100px !important;
     height: 60px !important;
@@ -165,8 +166,9 @@
     right: -20px;
   }
 }
+
 @media (max-width: 992px) {
-  .green-curve{
+  .green-curve {
     width: 150px;
     height: 65px;
   }

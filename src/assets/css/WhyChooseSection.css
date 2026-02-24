@@ -19,17 +19,6 @@
   margin-bottom: 10px;
 }
 
-/* Optional underline
-.why-title::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: #f1c232;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 10px;
-} */
-
 /* Item */
 .why-item {
   display: flex;
@@ -70,6 +59,7 @@
   .why-card {
     padding: 20px;
   }
+
   .why-item {
     font-size: 12px;
     padding: 0px 0px;

@@ -27,22 +27,25 @@
   transition: 0.3s;
 }
 
-.footerIcon{
+.footerIcon {
   background: rgba(255, 255, 255, 0.15);
   padding: 10px;
   border-radius: 50%;
 }
 
-.strip-icon.ftrPhone{
+.strip-icon.ftrPhone {
   color: #00b0ff;
 }
+
 .strip-icon.whatsapp {
   color: #26eb6f;
 }
-.strip-icon.ftrMap{
+
+.strip-icon.ftrMap {
   color: #EA4335;
 }
-.strip-icon.ftrForm{
+
+.strip-icon.ftrForm {
   color: #e3c900;
 }
 
@@ -57,9 +60,9 @@
   opacity: 0.85;
 }
 
-@media (max-width: 992px){
-  .footer-strip{
-    padding-bottom: 70px; 
+@media (max-width: 992px) {
+  .footer-strip {
+    padding-bottom: 70px;
   }
 }
 
@@ -71,7 +74,7 @@
     text-align: center;
     flex-direction: column;
   }
-  
+
 }
 
 
@@ -84,16 +87,15 @@
   .strip-item p {
     font-size: 11px;
   }
+
   .strip-icon {
     font-size: 25px;
   }
-  .footer-strip{
-    padding-bottom: 70px; 
+
+  .footer-strip {
+    padding-bottom: 70px;
   }
 }
-
-
-
 
 
 
@@ -115,7 +117,8 @@
 @media (max-width: 575px) {
 
   .strip-item {
-    flex-direction: column;     /* icon on top */
+    flex-direction: column;
+    /* icon on top */
     text-align: center;
     align-items: center;
   }
@@ -131,48 +134,6 @@
 }
 
 
-/*Fixed button footer */
-/* .fixed-gat-btn {
-  position: fixed;
-  bottom: 5px;
-  right: 15px;
-  z-index: 1050;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #28a745, #20c997);
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 16px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  box-shadow: 0 12px 30px rgba(40, 167, 69, 0.4);
-  cursor: pointer;
-  animation: softPulse 2s infinite;
-}
-
-@media (min-width: 992px) {
-  .fixed-gat-btn {
-    display: none;
-  }
-}
-
-@keyframes softPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 14px rgba(40, 167, 69, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
-  }
-} */
-
-
-/* FOOTER STRIP */
-
-/* FIXED BUTTONS */
 
 /* FIXED BUTTON WRAPPER */
 /* WRAPPER */
@@ -221,13 +182,14 @@
 
 /* FOOTER CONTENT BUTTON OVERLAP FIX */
 .footer-strip {
-  padding-bottom: 70px; /* buttons height space */
+  padding-bottom: 70px;
 }
 
-.callFixedBtn{
+.callFixedBtn {
   border-radius: 20px 0px 0px 0px;
 }
-.whatsappFixedBtn{
+
+.whatsappFixedBtn {
   border-radius: 0px 20px 0px 0px;
 }
 
@@ -246,5 +208,3 @@
     padding: 13px 6px;
   }
 }
-
-

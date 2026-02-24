@@ -61,7 +61,6 @@ const location = useLocation();
                 <Route path="whychoosesection" element={ <WhyChooseSection />} />
                 <Route path="callbannersection" element={<CallBannerSection />} />
                 <Route path="contactform" element={<ContactForm />} />
-                {/* <Route path="Sevashetra" element={<Sevashetra />} /> */}
                 <Route path="about" element={<About />} />
                 <Route path="whoapply" element={<WhoApply />} />
                 <Route path="problems" element={<Problems />}/>
@@ -70,14 +69,9 @@ const location = useLocation();
             {location.pathname === "/" && <Process />}
             {location.pathname === "/" && <ArjForm />}
             {location.pathname === "/" && <QuickFormSection />}
-            {/* {location.pathname === "/" && <Sevashetra />} */}
             {location.pathname === "/" && <MojaniGallery />}
             {location.pathname === "/" && <WhyChooseSection />}
             {location.pathname === "/" && <CallBannerSection />}
-            {/* {location.pathname === "/" && <ContactForm />} */}
-            {/* {location.pathname === "/" && <About />}
-            {location.pathname === "/" && <WhoApply />}
-            {location.pathname === "/" && <Problems />} */}
       </main>
       <Footer />
        

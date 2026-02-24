@@ -1,14 +1,15 @@
-.whoappheading{
-    color: #0891b2;
-    font-weight: 600;
+.whoappheading {
+  color: #0891b2;
+  font-weight: 600;
 }
 
 .whoapply-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   justify-items: center;
 }
+
 .whoapply-card {
   padding: 30px 20px;
   text-align: center;
@@ -21,6 +22,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
+
 .whoapply-card::before {
   content: "";
   position: absolute;
@@ -30,19 +32,23 @@
   transition: opacity 0.35s ease;
   z-index: 0;
 }
+
 .whoapply-card:hover::before {
   opacity: 0.08;
 }
+
 .whoapply-card:hover {
   transform: translateY(-10px);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
+
 .card-icon {
   font-size: 2.8rem;
   margin-bottom: 15px;
   position: relative;
   z-index: 1;
 }
+
 .card-title-who-apply {
   font-size: 20px;
   font-weight: 600;
@@ -50,4 +56,3 @@
   position: relative;
   z-index: 1;
 }
-

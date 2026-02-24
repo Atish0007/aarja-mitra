@@ -20,7 +20,6 @@ export default function WhyChooseSection() {
         "Pimpri-Chinchwad Mojani"
     ];
 
-
     return (
         <section className="why-section py-4">
             <div className="container">

@@ -11,7 +11,6 @@ import six from "../../assets/images/gallery/six.jpeg";
 import seven from "../../assets/images/gallery/seven.jpg";
 import eight from "../../assets/images/gallery/eight.jpg";
 import nine from "../../assets/images/gallery/nine.jpg";
-// import ten from "../../assets/images/gallery/ten.jpg";
 
 const images = [
   one,
@@ -22,10 +21,7 @@ const images = [
   six,
   seven,
   eight,
-  nine,
-//   ten
-//   "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-//   "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+  nine
 ];
 
 export default function MojaniGallery() {

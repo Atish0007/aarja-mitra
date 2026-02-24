@@ -3,9 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import apli_mojaniLogo from "../assets/images/apli_mojaniLogo.png";
 import "../assets/css/header.css";
 import Offcanvas from "bootstrap/js/dist/offcanvas";
-//import Collapse from "bootstrap/js/dist/collapse";
 import Collapse from "bootstrap/js/dist/collapse";
-
 
 
 function Header() {
@@ -19,8 +17,6 @@ function Header() {
   const handleWhatsApp = () => {
 
     const message = `नमस्कार,\n\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
-    //const message = `नमस्कार,\n\nनाव: ${//name}\nमोबाईल: ${//mobile}\n\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
-
     const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -52,42 +48,42 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, hasTriggered]);
 
-//toggler btn
-const collapseInstance = useRef(null);
+  //toggler btn
+  const collapseInstance = useRef(null);
 
-useEffect(() => {
-  const collapseEl = document.getElementById("navbarNav");
-  const toggler = document.querySelector(".navbar-toggler.d-lg-none");
+  useEffect(() => {
+    const collapseEl = document.getElementById("navbarNav");
+    const toggler = document.querySelector(".navbar-toggler.d-lg-none");
 
-  if (!collapseEl || !toggler) return;
+    if (!collapseEl || !toggler) return;
 
-  // Create Bootstrap Collapse instance
-  collapseInstance.current = new Collapse(collapseEl, {
-    toggle: false,
-  });
+    // Create Bootstrap Collapse instance
+    collapseInstance.current = new Collapse(collapseEl, {
+      toggle: false,
+    });
 
-  const handleShown = () => {
-    toggler.classList.add("active");
-    toggler.setAttribute("aria-expanded", "true");
-  };
+    const handleShown = () => {
+      toggler.classList.add("active");
+      toggler.setAttribute("aria-expanded", "true");
+    };
 
-  const handleHidden = () => {
-    toggler.classList.remove("active");
-    toggler.setAttribute("aria-expanded", "false");
-  };
+    const handleHidden = () => {
+      toggler.classList.remove("active");
+      toggler.setAttribute("aria-expanded", "false");
+    };
 
-  collapseEl.addEventListener("shown.bs.collapse", handleShown);
-  collapseEl.addEventListener("hidden.bs.collapse", handleHidden);
+    collapseEl.addEventListener("shown.bs.collapse", handleShown);
+    collapseEl.addEventListener("hidden.bs.collapse", handleHidden);
 
-  return () => {
-    collapseEl.removeEventListener("shown.bs.collapse", handleShown);
-    collapseEl.removeEventListener("hidden.bs.collapse", handleHidden);
-  };
-}, []);
+    return () => {
+      collapseEl.removeEventListener("shown.bs.collapse", handleShown);
+      collapseEl.removeEventListener("hidden.bs.collapse", handleHidden);
+    };
+  }, []);
 
 
 
-/* ================= Init Offcanvas ONCE ================= */
+  /* ================= Init Offcanvas ONCE ================= */
   useEffect(() => {
     if (offcanvasRef.current) {
       offcanvasInstance.current = new Offcanvas(offcanvasRef.current, {
@@ -116,14 +112,14 @@ useEffect(() => {
     offcanvasInstance.current?.hide();
   };
 
-useEffect(() => {
-  // Close mobile collapse properly
-  collapseInstance.current?.hide();
+  useEffect(() => {
+    // Close mobile collapse properly
+    collapseInstance.current?.hide();
 
-  // Close desktop sidebar
-  offcanvasInstance.current?.hide();
+    // Close desktop sidebar
+    offcanvasInstance.current?.hide();
 
-}, [location]);
+  }, [location]);
 
 
   return (
@@ -137,61 +133,46 @@ useEffect(() => {
             <img src={apli_mojaniLogo} className="" alt="Apli-Mojani" height="90" />
           </Link>
 
-    {/* TOGGLER + CALL BUTTON WRAPPER */}
-    <div className="d-flex align-items-center gap-3 ms-auto"> 
+          {/* TOGGLER + CALL BUTTON WRAPPER */}
+          <div className="d-flex align-items-center gap-3 ms-auto">
 
-        {/* CALL BUTTON */}
-        <button type="button"
-            className="btn btn-success btn-md align-items-center px-2 px-lg-4 py-1 py-lg-2 fs-6 fs-lg-6" //d-none d-sm-inline-flex
-            onClick={handleWhatsApp}
-        >
-          <i className="fa-solid fa-phone mb-1 me-2"></i> अर्ज करा
-        </button>
+            {/* CALL BUTTON */}
+            <button type="button"
+              className="btn btn-success btn-md align-items-center px-2 px-lg-4 py-1 py-lg-2 fs-6 fs-lg-6" //d-none d-sm-inline-flex
+              onClick={handleWhatsApp}
+            >
+              <i className="fa-solid fa-phone mb-1 me-2"></i> अर्ज करा
+            </button>
 
-          {/* MOBILE TOGGLER (UNCHANGED) */}
-          {/* <button
-            className="navbar-toggler custom-toggler d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation"
-          >
-             <div className="toggler-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-          </button> */}
-          <button
-  className="navbar-toggler custom-toggler d-lg-none"
-  type="button"
-  aria-controls="navbarNav"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
-  onClick={() => collapseInstance.current?.toggle()}
->
-  <div className="toggler-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</button>
+            <button
+              className="navbar-toggler custom-toggler d-lg-none"
+              type="button"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              onClick={() => collapseInstance.current?.toggle()}
+            >
+              <div className="toggler-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
 
 
-          {/* DESKTOP TOGGLER (NEW) */}
-          <button
-            className="navbar-toggler custom-toggler d-none d-lg-block"
-            type="button"
-          onClick={openSidebar}
-          >
-             <div className="toggler-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-          </button>
-    </div>
+            {/* DESKTOP TOGGLER (NEW) */}
+            <button
+              className="navbar-toggler custom-toggler d-none d-lg-block"
+              type="button"
+              onClick={openSidebar}
+            >
+              <div className="toggler-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
 
           {/* MOBILE MENU (SAME AS BEFORE) */}
           <div className="collapse navbar-collapse d-lg-none ms-4" id="navbarNav">
@@ -213,14 +194,6 @@ useEffect(() => {
                 <Link to="/problems" className={isActive("/problems")}>समस्या</Link>
               </li>
 
-              {/* <li className="nav-item">
-                <Link to="/services" className={isActive("/services")}>सेवा</Link>
-              </li>
-
-              <li className="nav-item">
-                <Link to="/process" className={isActive("/process")}>प्रक्रिया</Link>
-              </li> */}
-
               <li className="nav-item">
                 <Link to="/contactform" className={isActive("/contactform")}>संपर्क</Link>
               </li>
@@ -232,7 +205,7 @@ useEffect(() => {
 
       {/* DESKTOP SIDEBAR (NEW) d-none d-lg-block */}
 
-      <div 
+      <div
         ref={offcanvasRef}
         className="offcanvas offcanvas-start cstmSideBarColr" /* Menu set left right = start end*/
         tabIndex="-1"
@@ -243,7 +216,7 @@ useEffect(() => {
           <button
             type="button"
             className="btn-close bg-white"
-           onClick={closeSidebar}
+            onClick={closeSidebar}
           ></button>
         </div>
 
@@ -264,7 +237,7 @@ useEffect(() => {
 
             <li className="nav-item">
               <Link to="/whoapply" className={isActive("/whoapply")} onClick={closeSidebar}>
-                अर्जदार 
+                अर्जदार
               </Link>
             </li>
 
@@ -273,18 +246,6 @@ useEffect(() => {
                 समस्या
               </Link>
             </li>
-
-            {/* <li className="nav-item">
-              <Link to="/services" className={isActive("/services")} onClick={closeSidebar}>
-                सेवा
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link to="/process" className={isActive("/process")} onClick={closeSidebar}>
-                प्रक्रिया
-              </Link>
-            </li> */}
 
             <li className="nav-item">
               <Link to="/contactform" className={isActive("/contactform")} onClick={closeSidebar}>

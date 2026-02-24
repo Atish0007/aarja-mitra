@@ -15,58 +15,38 @@ export default function QuickFormSection() {
     const items = [
         { icon: gatno, text: "फक्त गट नंबर सांगा", color: "warning" },
         { icon: aadharcard, text: "आधार कार्ड", color: "success" },
-        // { icon: sadhekagad, text: "साधे कागद / कागद", color: "warning" },
         { icon: phone, text: "मोबाईल नंबर", color: "primary" }
     ];
 
     // Validations for buttons
     const validateForm = () => {
-    if (!name.trim()) {
-      alert("कृपया पूर्ण नाव भरा");
-      return false;
-    }
+        if (!name.trim()) {
+            alert("कृपया पूर्ण नाव भरा");
+            return false;
+        }
 
-    if (!mobile.trim()) {
-      alert("कृपया मोबाईल नंबर भरा");
-      return false;
-    }
+        if (!mobile.trim()) {
+            alert("कृपया मोबाईल नंबर भरा");
+            return false;
+        }
 
-    if (!/^[6-9]\d{9}$/.test(mobile)) {
-      alert("कृपया वैध 10 अंकी मोबाईल नंबर भरा");
-      return false;
-    }
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+            alert("कृपया वैध 10 अंकी मोबाईल नंबर भरा");
+            return false;
+        }
 
-    return true;
-  };
+        return true;
+    };
 
-  // WhatsApp Handler
-  const handleWhatsApp = () => {
-    if (!validateForm()) return;
+    // WhatsApp Handler
+    const handleWhatsApp = () => {
+        if (!validateForm()) return;
 
-    const message = `नमस्कार,\n\nनाव: ${name}\nमोबाईल: ${mobile}\n\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
+        const message = `नमस्कार,\n\nनाव: ${name}\nमोबाईल: ${mobile}\n\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
 
-    const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
-  // Call Handler
-//   const handleCall = () => {
-//     if (!validateForm()) return;
-
-//     // window.location.href = "tel:7387484615";
-//     const message = `नमस्कार,
-//     नाव: ${name}
-//     मोबाईल: ${mobile}
-
-//     मला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
-
-//     // Works on Android & iOS
-//     const smsUrl = `sms:7387484615?body=${encodeURIComponent(message)}`;
-//     window.location.href = smsUrl;
-
-//   };
-
-
+        const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, "_blank");
+    };
 
     return (
         <section className="quick-form-section py-5 pt-4 pt-md-0 pb-4">
@@ -141,17 +121,14 @@ export default function QuickFormSection() {
                                     />
                                 </div>
 
-                                <button type="button" 
-                                        className="btn whatsapp-btn w-100 fs-5"
-                                        onClick={handleWhatsApp}>
+                                <button type="button"
+                                    className="btn whatsapp-btn w-100 fs-5"
+                                    onClick={handleWhatsApp}>
                                     <i className="fab fa-whatsapp fs-4 me-2"></i>
                                     WhatsApp वर अर्ज पाठवा
                                 </button>
-                                <a href="tel:7387484615"
-                                        className="btn call-btn w-100 mt-2 fs-5 text-decoration-none"
-                                       >
+                                <a href="tel:7387484615" className="btn call-btn w-100 mt-2 fs-5 text-decoration-none">
                                     <i className="fa-solid fa-phone me-1 fs-5 HmIconSize"></i> कॉल करा</a>
-                                    {/*  onClick={handleCall} */}
                             </form>
 
                         </div>
@@ -162,6 +139,6 @@ export default function QuickFormSection() {
             </div>
         </section>
 
-        
+
     );
 }

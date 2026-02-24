@@ -2,76 +2,58 @@ import { useEffect } from "react";
 import { Carousel } from "bootstrap";
 import '../../assets/css/home.css';
 import mojaniLG from "../../assets/images/mojniLG.PNG";
-import graminLG from "../../assets/images/graminLG.png"
 
-function Home(){
-
-    // useEffect(() => {
-    //     const el = document.getElementById("homeBrandCarousel");
-    //     if (el) {
-    //         new Carousel(el, {
-    //         interval: 5000,
-    //         ride: "carousel",
-    //         });
-    //     }
-    // }, []);
+function Home() {
 
 
     useEffect(() => {
-    const el = document.getElementById("homeBrandCarousel");
-    if (!el) return;
+        const el = document.getElementById("homeBrandCarousel");
+        if (!el) return;
 
-    const carousel = new Carousel(el, {
-        interval: 5000,
-        ride: "carousel",
-        pause: false, // IMPORTANT: disable default hover pause
-    });
+        const carousel = new Carousel(el, {
+            interval: 5000,
+            ride: "carousel",
+            pause: false, // IMPORTANT: disable default hover pause
+        });
 
-    /* ===== DESKTOP EVENTS ===== */
-    el.addEventListener("mouseenter", () => carousel.pause());
-    el.addEventListener("mouseleave", () => carousel.cycle());
+        /* ===== DESKTOP EVENTS ===== */
+        el.addEventListener("mouseenter", () => carousel.pause());
+        el.addEventListener("mouseleave", () => carousel.cycle());
 
-    /* ===== MOBILE EVENTS ===== */
-    el.addEventListener("touchstart", () => carousel.pause(), { passive: true });
-    el.addEventListener("touchend", () => carousel.cycle());
-    el.addEventListener("touchcancel", () => carousel.cycle());
+        /* ===== MOBILE EVENTS ===== */
+        el.addEventListener("touchstart", () => carousel.pause(), { passive: true });
+        el.addEventListener("touchend", () => carousel.cycle());
+        el.addEventListener("touchcancel", () => carousel.cycle());
 
-    return () => {
-        carousel.dispose();
-    };
-}, []);
+        return () => {
+            carousel.dispose();
+        };
+    }, []);
 
 
     const handleWhatsApp = () => {
 
-    const message = `नमस्कार,\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
-    //const message = `नमस्कार,\n\nनाव: ${//name}\nमोबाईल: ${//mobile}\n\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
+        const message = `नमस्कार,\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
+        const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, "_blank");
+    };
 
-    const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
-
-    return(
+    return (
         <>
-        <section className="d-flex align-items-center homeBG">
-            <div className="container">
-                <div className="row justify-content-start">
-                    <div className="col-md-8 col-sm-6 text-center p-0">
+            <section className="d-flex align-items-center homeBG">
+                <div className="container">
+                    <div className="row justify-content-start">
+                        <div className="col-md-8 col-sm-6 text-center p-0">
 
-                        <div
-                        id="homeBrandCarousel"
-                        className="carousel slide brandWrap animated-label" //carousel slide brandWrap animated-label
-                        // data-bs-ride="carousel"
-                        // data-bs-interval="5000"
-                        >
-                        <div className="carousel-inner">
+                            <div id="homeBrandCarousel" className="carousel slide brandWrap animated-label">
+                                <div className="carousel-inner">
 
-                            {/* ===== SLIDE 1 : Aapli Mojani ===== */}
-                            <div className="carousel-item active">
+                                    {/* ===== SLIDE 1 : Aapli Mojani ===== */}
+                                    <div className="carousel-item active">
                                         <h1 className="homeHeading hmheadful hmbar pt-2 pt-md-0">
                                             <img className="mojaniLG" src={mojaniLG} alt="ApliMojani" />
                                             <span className="MainHeading cstEngFont AapliMojaniText F60">
-                                            आपली मोजणी
+                                                आपली मोजणी
                                             </span>
                                         </h1>
 
@@ -91,61 +73,31 @@ function Home(){
                                             <span className="text-success">✔</span> Citizen Assistance Service |{" "}
                                             <span className="text-success">✔</span> Maharashtra Wide
                                         </small>
-                            </div> 
+                                    </div>
 
-                            {/* ===== SLIDE 2 : PM Awas Yojana ===== */}
-                             {/* <div className="carousel-item text-start text-sm-center">
-                                    <h1 className="hmbar pt-2 pt-md-0">
-                                         <img className="graminLG" src={graminLG} alt="ApliMojani" />
-                                        <span className="MainHeading cstEngFont AapliMojaniText F40 F2ndSlideMainHdng">प्रधानमंत्री आवास योजना –  तुमच्या स्वतःच्या घराचे स्वप्न आता साकार
-                                            </span>
-                                    </h1>
-
-                                    <h2 className="homeHeading hmbar tagline fw-bold F25 F2ndSlideSubHdng ms-4 ms-md-0">
-                                        ग्रामीण व शहरी लाभार्थ्यांसाठी अर्ज,<br className="d-block d-md-none" /> पात्रता तपासणी व संपूर्ण मार्गदर्शन –
-                                        <br className="d-block d-md-none" />
-                                        जलद आणि विश्वासार्ह सेवा
-                                    </h2>
-
-                                    <h5 className="homeHeading fw-bold F20 F2ndSlideAnudan ms-4 ms-md-0">
-                                        सरकारी अनुदान ₹1.20 लाख ते ₹2.50 लाख पर्यंत
-                                    </h5>
-
-                                    <small className="fw-bold F15">
-                                            <span className="text-success ms-3 ms-md-0">✔</span> ग्रामीण व शहरी दोन्ही योजना उपलब्ध |{" "} <br className="d-block d-md-none" />
-                                            <span className="text-success ms-3 ms-md-0">✔</span> अर्ज भरणे + डॉक्युमेंट चेक + फॉलोअप
-                                    </small>
-                            </div>  */}
-
-                        </div>
-                        </div>
-
-
-                        <div className="row justify-content-center mt-3 d-none d-sm-block">
-                            <div className="col-12 col-md-10 col-lg-8">
-                                <div className="d-flex flex-column flex-md-row gap-2 justify-content-center m-4 m-md-0">
-                                    <button className="btn btn-success cstEngFont btn-sm px-4 fs-6" onClick={handleWhatsApp}>
-                                        <i className="fa-brands fa-whatsapp me-1 HmIconSize"></i>
-                                        WhatsApp करा
-                                    </button>
-                                    <a href="tel:7387484615" className="btn btn-light text-dark cstEngFont btn-sm px-4 fs-6">
-                                        <i className="fa-solid fa-phone me-1 HmIconSize"></i>
-                                        संपर्क करा
-                                    </a>
                                 </div>
                             </div>
+
+                            <div className="row justify-content-center mt-3 d-none d-sm-block">
+                                <div className="col-12 col-md-10 col-lg-8">
+                                    <div className="d-flex flex-column flex-md-row gap-2 justify-content-center m-4 m-md-0">
+                                        <button className="btn btn-success cstEngFont btn-sm px-4 fs-6" onClick={handleWhatsApp}>
+                                            <i className="fa-brands fa-whatsapp me-1 HmIconSize"></i>
+                                            WhatsApp करा
+                                        </button>
+                                        <a href="tel:7387484615" className="btn btn-light text-dark cstEngFont btn-sm px-4 fs-6">
+                                            <i className="fa-solid fa-phone me-1 HmIconSize"></i>
+                                            संपर्क करा
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
-                        {/* <div className="d-flex flex-column flex-sm-row gap-2 mt-3 justify-content-center m-4 m-md-0">
-                            <button className="btn btn-success cstEngFont btn-sm px-3 fs-6" onClick={handleWhatsApp}><i className="fa-brands fa-whatsapp me-1 HmIconSize"></i> WhatsApp करा</button>
-                            <a href="tel:7387484615" className="btn btn-light text-dark cstEngFont btn-sm px-3 fs-6"><i className="fa-solid fa-phone me-1 HmIconSize"></i> संपर्क करा</a>
-                        </div> */}
-
                     </div>
-
                 </div>
-            </div>
-        </section>
+            </section>
         </>
     )
 }

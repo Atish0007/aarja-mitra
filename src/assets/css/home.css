@@ -1,29 +1,33 @@
-.homeBG{
-    background-image: url(../../assets/images/apli_mojaniBG.png);
-    background-size: cover;
-    background-position: 15% 50%;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    text-align: center;
-    border-bottom: 2px solid #1f7aa5;
+.homeBG {
+  background-image: url(../../assets/images/apli_mojaniBG.png);
+  background-size: cover;
+  background-position: 15% 50%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  border-bottom: 2px solid #1f7aa5;
 }
-.AapliMojaniText{
+
+.AapliMojaniText {
   margin-left: -20px;
 }
 
 .brandWrap {
-  display: inline-block;          
+  display: inline-block;
   text-align: center;
 }
-.homeHeading{
-    color: #00409d;
-    font-weight: 600;
+
+.homeHeading {
+  color: #00409d;
+  font-weight: 600;
 }
+
 .mojaniLG {
   height: 65px;
   margin-bottom: 5px;
 }
-.graminLG{
+
+.graminLG {
   height: 60px;
   transform: scale(2.5);
   margin-right: 35px;
@@ -35,18 +39,20 @@
   align-items: center;
   justify-content: center;
   gap: 0px;
-  
+
 }
-.hmbar{
-    position: relative;
+
+.hmbar {
+  position: relative;
 }
+
 .hmbar::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;                     
-  border-bottom: 2px solid #dcdcdc; 
+  width: 100%;
+  border-bottom: 2px solid #dcdcdc;
 }
 
 .tagline {
@@ -60,46 +66,57 @@
   color: white;
   border-radius: 5px;
 }
-.green {background:#25d366;}
-.blue {background:#1976d2;}
-.dark {background:#333;}
 
-.HmbtnW{
-     width: 0%;
-    padding: 5px !important;
-    margin: 0px !important;
+.green {
+  background: #25d366;
 }
-.HmbtnS{
-      width: 0%;
-    padding: 5px !important;
-    margin: 0px !important;
+
+.blue {
+  background: #1976d2;
 }
-.HmIconSize{
+
+.dark {
+  background: #333;
+}
+
+.HmbtnW {
+  width: 0%;
+  padding: 5px !important;
+  margin: 0px !important;
+}
+
+.HmbtnS {
+  width: 0%;
+  padding: 5px !important;
+  margin: 0px !important;
+}
+
+.HmIconSize {
   font-size: 15px;
 }
 
 
 
-.F60{
+.F60 {
   font-size: 49px;
 }
-.F40{
-  font-size:40px;
+
+.F40 {
+  font-size: 40px;
 }
-.F25{
-  font-size:25px;
+
+.F25 {
+  font-size: 25px;
 }
-.F20{
-  font-size:20px;
+
+.F20 {
+  font-size: 20px;
   color: #ff0061;
 }
-.F15{
-  font-size:15px;
+
+.F15 {
+  font-size: 15px;
 }
-
-
-
-
 
 
 
@@ -107,77 +124,90 @@
   .homeBG {
     background-position: 80% 50% !important;
   }
-  .hmbar{
+
+  .hmbar {
     position: unset !important;
   }
-  .hmbar::after{
-    content:none !important;
+
+  .hmbar::after {
+    content: none !important;
   }
+
   #homeBrandCarousel .carousel-inner {
-    min-height: 400px;   /* adjust if needed */
+    min-height: 400px;
+    /* adjust if needed */
   }
+
   .graminLG {
     height: 50px;
     transform: scale(2);
     margin-right: 25px;
   }
-  .MainHeadingHM{
+
+  .MainHeadingHM {
     font-size: unset !important;
   }
- .F60{
+
+  .F60 {
     font-size: 29px !important;
   }
+
   .F40 {
     font-size: 25px !important;
   }
+
   .F25 {
     font-size: 15px !important;
   }
+
   .F20 {
     font-size: 15px !important;
     font-weight: 900 !important;
     color: #ff0061;
   }
-  .F15{
+
+  .F15 {
     font-size: 13px !important;
   }
 
   #homeBrandCarousel .carousel-inner {
-    min-height: unset !important;  
-}
-
-#homeBrandCarousel .carousel-item {
     min-height: unset !important;
-}
+  }
+
+  #homeBrandCarousel .carousel-item {
+    min-height: unset !important;
+  }
 
 }
- 
-
 
 
 /* Crusl */
 
 /* Fix carousel height so buttons don't jump */
 #homeBrandCarousel .carousel-inner {
-    min-height: 300px;   /* adjust if needed */
+  min-height: 300px;
+  /* adjust if needed */
 }
 
 #homeBrandCarousel .carousel-item {
-    min-height: 300px;
+  min-height: 300px;
 }
 
 
-@media (max-width:576px){
+@media (max-width:576px) {
 
   .homeBG {
-    background-size: cover;   /* OR use cover if you prefer */
+    background-size: cover;
+    /* OR use cover if you prefer */
     background-position: center;
     background-repeat: no-repeat;
     min-height: unset !important;
   }
+
   .homeBG .text-center {
     text-align: left !important;
   }
+
   .homeHeading.F60 {
     font-size: 32px !important;
     margin-top: 10px;
@@ -201,6 +231,7 @@
     font-size: 11px !important;
     color: #fff;
   }
+
   .mojaniLG {
     height: 40px;
     margin-right: 6px;
@@ -208,37 +239,33 @@
   }
 
   /*2nd slide*/
-  .F2ndSlideMainHdng{
-      font-size: 16px !important;
+  .F2ndSlideMainHdng {
+    font-size: 16px !important;
   }
-  .F40{
-    font-size:14px !important;
+
+  .F40 {
+    font-size: 14px !important;
   }
-  .F2ndSlideSubHdng{
+
+  .F2ndSlideSubHdng {
     font-size: 10px !important;
   }
-  .F2ndSlideAnudan{
+
+  .F2ndSlideAnudan {
     font-size: 11px !important;
     font-weight: 900 !important;
     color: #ff0061;
   }
+
   .graminLG {
     height: 40px;
     transform: scale(2);
     margin-right: 25px;
   }
-      #homeBrandCarousel .carousel-inner {
-        min-height: 229px !important;
-    }
-  /* .F25{
-    font-size:unset !important;
+
+  #homeBrandCarousel .carousel-inner {
+    min-height: 229px !important;
   }
-  .F20{
-    font-size:unset !important;
-  }
-  .F15{
-    font-size:unset !important;
-  } */
 
 }
 

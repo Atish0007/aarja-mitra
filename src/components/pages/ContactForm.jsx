@@ -5,8 +5,7 @@ import bannerImg from "../../assets/images/arjBG.png";
 export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: "",
-        mobile: "",
-        //message: ""
+        mobile: ""
     });
 
     const handleChange = (e) => {
@@ -27,16 +26,9 @@ export default function ContactForm() {
             return false;
         }
 
-        // if (!formData.message.trim()) {
-        //     alert("कृपया संदेश लिहा");
-        //     return false;
-        // }
-
         return true;
     };
 
-    //     संदेश:
-    // ${formData.message}`;
     const handleWhatsApp = () => {
         if (!validateForm()) return;
 
@@ -96,8 +88,6 @@ export default function ContactForm() {
                                     onChange={handleChange}
                                 />
                             </div>
-
-
 
                             <div className="d-grid gap-2">
                                 <button

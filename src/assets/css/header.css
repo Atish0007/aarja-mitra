@@ -1,7 +1,6 @@
-
-.header-bg{
-   background-color: rgb(250, 250, 252);
-   font-size:12px;
+.header-bg {
+  background-color: rgb(250, 250, 252);
+  font-size: 12px;
 }
 
 .navbar-bg {
@@ -12,47 +11,19 @@
   transform: translateY(0) !important;
 }
 
-/* .navbar {
-    min-height: 90px; 
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.aplimojani-brand img {
-    height: 90px;       
-    width: auto;
-    object-fit: contain;
-} */
 
 .aplimojani-brand {
-    display: flex;
-    align-items: center;
-}
-
-.aplimojani-brand img {
-    /* height: 60px;
-    transform: scale(2.5); */
-    height: 50px;
-    transform: scale(4.5);
-    margin-top: 10px;
-}
-
-
-/* .navbar-nav-mob {
-  align-items: center;
-}
-
-.navbar-nav-mob .nav-item-mob {
   display: flex;
   align-items: center;
 }
 
-.navbar-nav-mob .nav-item-mob:not(:last-child)::after {
-  content: "|";
-  color: #fff;        
-  margin: 0 14px;      
-  font-weight: 300;
-} */
+.aplimojani-brand img {
+  /* height: 60px;
+    transform: scale(2.5); */
+  height: 50px;
+  transform: scale(4.5);
+  margin-top: 10px;
+}
 
 
 /* sticky base (hidden first) */
@@ -83,83 +54,94 @@
 
 /* Animations */
 .fade-left-anim {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.8s ease;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease;
 }
-  
+
 .fade-left-anim.visible {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .fade-right-anim {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.8s ease;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease;
 }
 
 .fade-right-anim.visible {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .fade-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeLeft 2s forwards;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeLeft 2s forwards;
 }
 
 .fade-right {
-    opacity: 0;
-    transform: translateX(30px);
-    animation: fadeRight 2s forwards;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeRight 2s forwards;
 }
 
 @keyframes fadeLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 
 @keyframes fadeInOpacity {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOutOpacity {
-    from { opacity: 1; }
-    to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(8px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animated-label {
-    animation: fadeInUp 0.8s ease-in-out;
-    display: inline-block;
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
   }
 
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-label {
+  animation: fadeInUp 0.8s ease-in-out;
+  display: inline-block;
+}
 
 
-  @media (min-width: 992px) {
+
+@media (min-width: 992px) {
   .offcanvas {
     width: 280px;
   }
@@ -171,23 +153,25 @@
 }
 
 
-.cstmSideBarColr{
-    background-color: #031530 !important;
+.cstmSideBarColr {
+  background-color: #031530 !important;
 }
-.btn-close{
-    opacity:unset !important;
+
+.btn-close {
+  opacity: unset !important;
 }
 
 .offcanvas {
   transition: transform 0.35s ease-in-out;
 }
+
 @media (min-width: 992px) {
   #desktopSidebar {
     width: 300px;
   }
 }
 
-@media (max-width: 580px){
+@media (max-width: 580px) {
   .aplimojani-brand img {
     height: 60px;
     transform: scale(2);

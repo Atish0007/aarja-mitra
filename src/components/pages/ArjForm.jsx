@@ -4,10 +4,8 @@ import bannerImg from "../../assets/images/arjBG.png";
 function ArjForm() {
 // WhatsApp Handler
   const handleWhatsApp = () => {
-
-    //const message = `नमस्कार,\n\nनाव: ${//name}\nमोबाईल: ${//mobile}\n\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
+    
     const message = `नमस्कार,\n\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
-
     const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };

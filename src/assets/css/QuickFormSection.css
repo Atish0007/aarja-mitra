@@ -1,13 +1,10 @@
-
-
-
 .quick-form-section {
   background: #f4f6fb;
 }
 
 
 /* Left info box */
-.quick-info-box{
+.quick-info-box {
   background: #ffffff;
   padding: 30px;
   border-radius: 16px;
@@ -21,7 +18,7 @@
 }
 
 
-.quick-info-box:hover{
+.quick-info-box:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
 }
@@ -107,11 +104,12 @@
 }
 
 /* Mobile */
-@media (max-width: 767px){
-  .quick-form-card{
+@media (max-width: 767px) {
+  .quick-form-card {
     margin-top: 10px;
   }
 }
+
 @media (max-width: 576px) {
   .quick-form-card {
     padding: 25px;

@@ -1,18 +1,18 @@
- import "../../assets/css/about.css"; 
- import aplimojaniAbt from "../../assets/images/apli_mojani_abt.png";
+import "../../assets/css/about.css";
+import aplimojaniAbt from "../../assets/images/apli_mojani_abt.png";
 
- function About() {
-  return (
-    <section className="py-5">
+function About() {
+    return (
+        <section className="py-5">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12">
 
                         <h1 className="MainHeading text-center pt-5"><span className="cstEngFont fw-bold">Aapli Mojani</span> म्हणजे काय ?</h1>
-                        
-                            <div className="bar">
-                                <div className="bar-fill"></div>
-                            </div>
+
+                        <div className="bar">
+                            <div className="bar-fill"></div>
+                        </div>
 
                         <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center py-4">
 
@@ -31,12 +31,12 @@
                             </div>
 
                         </div>
-                            
+
                     </div>
                 </div>
             </div>
-    </section>
-  );
+        </section>
+    );
 }
 
 export default About;

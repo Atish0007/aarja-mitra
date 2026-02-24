@@ -3,15 +3,13 @@ import "../../assets/css/CallBannerSection.css";
 
 export default function CallBannerSection() {
 
-const handleWhatsApp = () => {
+  const handleWhatsApp = () => {
 
     const message = `नमस्कार,\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
-    //const message = `नमस्कार,\n\nनाव: ${//name}\nमोबाईल: ${//mobile}\n\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
-
     const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
-  
+
 
   return (
     <section className="official-call-section py-4 pt-1">
@@ -38,7 +36,7 @@ const handleWhatsApp = () => {
             <div className="row g-3 mt-3">
               <div className="col-md-6 col-12">
                 <button type="button"
-                  className="btn whatsapp-btn w-100 fs-4" 
+                  className="btn whatsapp-btn w-100 fs-4"
                   onClick={handleWhatsApp}
                 >
                   <i className="fab fa-whatsapp me-2"></i>
