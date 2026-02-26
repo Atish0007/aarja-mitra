@@ -9,9 +9,9 @@ function Services() {
 
     const services = [
         { icon: survey, title: "जमीन मोजणी\nअर्ज", color: "green" },
-        { icon: land, title: "जुने 7/12 – काढणे", color: "yellow" },
-        { icon: online_application, title: "जुने फेरफार काढणे", color: "blue" },
-        { icon: house, title: "जुने\nखरेदीखत काढणे", color: "purple" }
+        { icon: land, title: "7/12 – काढणे", color: "yellow" },
+        { icon: online_application, title: "फेरफार काढणे", color: "blue" },
+        { icon: house, title: "7/12 – नोंदणी अर्ज", color: "purple" }
     ]
 
     return (
