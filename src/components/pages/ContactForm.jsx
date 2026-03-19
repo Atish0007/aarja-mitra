@@ -32,10 +32,31 @@ export default function ContactForm() {
     const handleWhatsApp = () => {
         if (!validateForm()) return;
 
+        // Google Ads Conversion Trigger
+        // if (window.gtag) {
+        //     window.gtag('event', 'conversion', {
+        //         'send_to': 'AW-17963207181/AbCdEf123'
+        //     });
+        // }
+
         const text = `नमस्कार,\n\nनाव: ${formData.name}\nमोबाईल: ${formData.mobile}`;
 
         const url = `https://wa.me/917387484615?text=${encodeURIComponent(text)}`;
         window.open(url, "_blank");
+    };
+
+
+    const handleCallClick = () => {
+
+        // Google Ads Conversion Fire
+        // if (window.gtag) {
+        //     window.gtag('event', 'conversion', {
+        //         send_to: '' 
+        //     });
+        // }
+
+        // Redirect to Dialer
+        window.location.href = "tel:7387484615";
     };
 
     return (
@@ -99,10 +120,14 @@ export default function ContactForm() {
                                     WhatsApp वर पाठवा
                                 </button>
 
-                                <a href="tel:7387484615" className="btn call-btn mt-2">
+                                <button
+                                    type="button"
+                                    onClick={handleCallClick}
+                                    className="btn call-btn mt-2"
+                                >
                                     <i className="fa-solid fa-phone me-2 mt-2"></i>
-                                    कॉल करा
-                                </a>
+                                    संपर्क करा
+                                </button>
                             </div>
 
                         </form>

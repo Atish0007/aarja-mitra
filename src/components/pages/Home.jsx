@@ -33,6 +33,13 @@ function Home() {
 
     const handleWhatsApp = () => {
 
+        // Google Ads Conversion Trigger
+        // if (window.gtag) {
+        //     window.gtag('event', 'conversion', {
+        //         'send_to': 'AW-17963207181/AbCdEf123'
+        //     });
+        // }
+
         const message = `नमस्कार,\nमला सरकारी मोजणीसाठी अर्ज करायचा आहे.`;
         const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");

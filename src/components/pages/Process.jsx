@@ -6,9 +6,9 @@ import { FaClipboardCheck, FaSmile, FaFileAlt, FaMapMarkerAlt } from "react-icon
 
 function Process() {
     const steps = [
-        { title: "सेवा निवडा", subtitle: "सेवा निवडा आणि कागदपत्र\nसबमिट करा.", icon: one },
-        { title: "तज्ञाशी बोला", subtitle: "आमचा प्रतिनिधी तुमच्याशी संपर्क करेल व फॉर्म भरेल.", icon: two },
-        { title: "काम सुरू", subtitle: "कागदपत्रे तपासून काम सुरू होते व फॉर्म whatsapp वर पाठवण्यात येतो.", icon: three }
+        { title: "सेवा निवडा", subtitle: "सेवा निवडा आणि कागदपत्रे\nसबमिट करा.", icon: one },
+        { title: "तज्ञांशी बोला", subtitle: "आमचा प्रतिनिधी तुमच्याशी संपर्क करेल व फॉर्म भरेल.", icon: two },
+        { title: "काम सुरू", subtitle: "कागदपत्रे तपासून अर्ज भरण्यात येतो त्यानंतर Whatsapp वर पाठवण्यात येतो.", icon: three }
     ];
 
     const stats = [

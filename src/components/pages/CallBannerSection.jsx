@@ -3,7 +3,28 @@ import "../../assets/css/CallBannerSection.css";
 
 export default function CallBannerSection() {
 
+
+  const handleCallClick = () => {
+
+    // Google Ads Conversion Fire
+    // if (window.gtag) {
+    //   window.gtag('event', 'conversion', {
+    //     send_to: ''  // <-- Call conversion ID tak
+    //   });
+    // }
+
+    // Redirect to phone
+    window.location.href = "tel:7387484615";
+  };
+
   const handleWhatsApp = () => {
+
+    // Google Ads Conversion Trigger
+    // if (window.gtag) {
+    //   window.gtag('event', 'conversion', {
+    //     'send_to': 'AW-17963207181/AbCdEf123'
+    //   });
+    // }
 
     const message = `नमस्कार,\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
     const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
@@ -24,7 +45,7 @@ export default function CallBannerSection() {
           {/* Main Body */}
           <div className="official-body">
 
-            <div className="call-heading fs-3 fw-bold">कॉल</div>
+            <div className="call-heading fs-3 fw-bold">संपर्क करा</div>
             <div className="call-number mt-0">7387484615</div>
 
             <div className="divider-line"></div>
@@ -45,13 +66,14 @@ export default function CallBannerSection() {
               </div>
 
               <div className="col-md-6 col-12">
-                <a
-                  href="tel:7387484615"
+                <button
+                  type="button"
+                  onClick={handleCallClick}
                   className="btn call-btn w-100 fs-4"
                 >
                   <i className="fas fa-phone me-2"></i>
                   आम्हाला कॉल करा
-                </a>
+                </button>
               </div>
             </div>
 

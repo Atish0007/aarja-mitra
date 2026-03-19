@@ -42,11 +42,32 @@ export default function QuickFormSection() {
     const handleWhatsApp = () => {
         if (!validateForm()) return;
 
+        // Google Ads Conversion Trigger
+        // if (window.gtag) {
+        //     window.gtag('event', 'conversion', {
+        //         'send_to': 'AW-17963207181/AbCdEf123'
+        //     });
+        // }
+
         const message = `नमस्कार,\n\nनाव: ${name}\nमोबाईल: ${mobile}\n\nमला माझा सरकारी मोजणीसाठी अर्ज भरायचा आहे.`;
 
         const whatsappUrl = `https://wa.me/917387484615?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");
     };
+
+    const handleCallClick = () => {
+
+        // Google Ads Conversion Fire
+        // if (window.gtag) {
+        //     window.gtag('event', 'conversion', {
+        //         send_to: '' 
+        //     });
+        // }
+
+        // Call redirect
+        window.location.href = "tel:7387484615";
+    };
+
 
     return (
         <section className="quick-form-section py-5 pt-4 pt-md-0 pb-4">
@@ -125,10 +146,16 @@ export default function QuickFormSection() {
                                     className="btn whatsapp-btn w-100 fs-5"
                                     onClick={handleWhatsApp}>
                                     <i className="fab fa-whatsapp fs-4 me-2"></i>
-                                    WhatsApp वर अर्ज पाठवा
+                                    WhatsApp वर गट नंबर पाठवा
                                 </button>
-                                <a href="tel:7387484615" className="btn call-btn w-100 mt-2 fs-5 text-decoration-none">
-                                    <i className="fa-solid fa-phone me-1 fs-5 HmIconSize"></i> कॉल करा</a>
+                                <button
+                                    type="button"
+                                    onClick={handleCallClick}
+                                    className="btn call-btn w-100 mt-2 fs-5 text-decoration-none"
+                                >
+                                    <i className="fa-solid fa-phone me-1 fs-5 HmIconSize"></i>
+                                    संपर्क करा
+                                </button>
                             </form>
 
                         </div>
